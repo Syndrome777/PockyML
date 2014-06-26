@@ -9,7 +9,7 @@ I'm a novice in ML, but I think I love it. So I will try my best to write this t
 Algorithm 
 ---------
 #### 1. k-means
-#### 2.GMM(Unfinished)
+#### 2. GMM(Unfinished)
 
 
 Author 
