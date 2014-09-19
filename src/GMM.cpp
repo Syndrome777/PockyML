@@ -1,5 +1,7 @@
 #include"GMM_head.h"
 
+
+
 GMM_model::GMM_model()
 {
 }

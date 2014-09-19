@@ -3,6 +3,7 @@
 
 
 #include"global.h"
+
 using namespace std;
 
 typedef struct node{

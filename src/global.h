@@ -7,9 +7,9 @@
  *
  */
 
-#ifdef _MSC_VER>1200
-#pragma once
-#endif
+//#ifdef _MSC_VER>1200
+//#pragma once
+//#endif
 
 #ifndef _Pocky_global_h_
 #define _Pocky_global_h_
@@ -17,6 +17,7 @@
 
 #include<iostream>
 #include<vector>
+#include<cmath>
 
 
 typedef std::vector<double> vec;
