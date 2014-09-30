@@ -124,7 +124,7 @@ inline double variance(const vec& vec1, const vec& vec2)
 	return sqrt(var);
 }
 
-int main()
+int test_main()
 {
 	double input;
 	kmeans_clusters mykmean;
