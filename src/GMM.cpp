@@ -49,7 +49,7 @@ void GMM_model::adjust_para()
 }
 
 
-int test_main()
+int main()
 {
 	return 0;
 }

@@ -1,0 +1,121 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+GMM_model	GMM.cpp	/^GMM_model::GMM_model()$/;"	f	class:GMM_model	signature:()
+GMM_model	GMM.cpp	/^GMM_model::GMM_model(const mat& in_data)$/;"	f	class:GMM_model	signature:(const mat& in_data)
+GMM_model	GMM_head.h	/^	GMM_model();$/;"	p	class:GMM_model	access:public	signature:()
+GMM_model	GMM_head.h	/^	GMM_model(const mat& in_data);$/;"	p	class:GMM_model	access:public	signature:(const mat& in_data)
+GMM_model	GMM_head.h	/^class GMM_model{$/;"	c
+GMM_model::GMM_model	GMM.cpp	/^GMM_model::GMM_model()$/;"	f	class:GMM_model	signature:()
+GMM_model::GMM_model	GMM.cpp	/^GMM_model::GMM_model(const mat& in_data)$/;"	f	class:GMM_model	signature:(const mat& in_data)
+GMM_model::GMM_model	GMM_head.h	/^	GMM_model();$/;"	p	class:GMM_model	access:public	signature:()
+GMM_model::GMM_model	GMM_head.h	/^	GMM_model(const mat& in_data);$/;"	p	class:GMM_model	access:public	signature:(const mat& in_data)
+GMM_model::adjust_para	GMM.cpp	/^void GMM_model::adjust_para()$/;"	f	class:GMM_model	signature:()
+GMM_model::adjust_para	GMM_head.h	/^	void adjust_para();\/\/参数调整，M步骤$/;"	p	class:GMM_model	access:private	signature:()
+GMM_model::dim_num	GMM_head.h	/^	int dim_num;\/\/特征维数$/;"	m	class:GMM_model	access:private
+GMM_model::display	GMM.cpp	/^void GMM_model::display()$/;"	f	class:GMM_model	signature:()
+GMM_model::display	GMM_head.h	/^	void display();$/;"	p	class:GMM_model	access:public	signature:()
+GMM_model::gama	GMM_head.h	/^	mat gama;\/\/概率矩阵：每个点对应每个高斯分布的概率$/;"	m	class:GMM_model	access:private
+GMM_model::gauss_num	GMM_head.h	/^	int gauss_num;\/\/高斯数$/;"	m	class:GMM_model	access:private
+GMM_model::get_prob	GMM.cpp	/^double GMM_model::get_prob(const int i, const int k)$/;"	f	class:GMM_model	signature:(const int i, const int k)
+GMM_model::get_prob	GMM_head.h	/^	double get_prob(const int i, const int k);\/\/获取整体后验概率，E步骤$/;"	p	class:GMM_model	access:private	signature:(const int i, const int k)
+GMM_model::input_data	GMM.cpp	/^void GMM_model::input_data(const mat& in_data)$/;"	f	class:GMM_model	signature:(const mat& in_data)
+GMM_model::input_data	GMM_head.h	/^	void input_data(const mat& in_data);$/;"	p	class:GMM_model	access:public	signature:(const mat& in_data)
+GMM_model::para	GMM_head.h	/^	vector<gmm_node> para;\/\/高斯模型参数$/;"	m	class:GMM_model	access:private
+GMM_model::probability	GMM.cpp	/^double GMM_model::probability(const vec& sample)$/;"	f	class:GMM_model	signature:(const vec& sample)
+GMM_model::probability	GMM_head.h	/^	double probability(const vec& sample);$/;"	p	class:GMM_model	access:public	signature:(const vec& sample)
+GMM_model::raw_data	GMM_head.h	/^	mat raw_data;\/\/原始数据$/;"	m	class:GMM_model	access:private
+GMM_model::samp_num	GMM_head.h	/^	int samp_num;\/\/样本数$/;"	m	class:GMM_model	access:private
+GMM_model::train	GMM.cpp	/^void GMM_model::train(const int g_num)$/;"	f	class:GMM_model	signature:(const int g_num)
+GMM_model::train	GMM_head.h	/^	void train(const int g_num);$/;"	p	class:GMM_model	access:public	signature:(const int g_num)
+GMM_model::~GMM_model	GMM.cpp	/^GMM_model::~GMM_model()$/;"	f	class:GMM_model	signature:()
+GMM_model::~GMM_model	GMM_head.h	/^	~GMM_model();$/;"	p	class:GMM_model	access:public	signature:()
+_GMM_HEAD_H_	GMM_head.h	/^#define _GMM_HEAD_H_$/;"	d
+_Pocky_global_h_	global.h	/^#define _Pocky_global_h_$/;"	d
+_kmeans_head_h	kmeans_head.h	/^#define _kmeans_head_h$/;"	d
+adjust_para	GMM.cpp	/^void GMM_model::adjust_para()$/;"	f	class:GMM_model	signature:()
+adjust_para	GMM_head.h	/^	void adjust_para();\/\/参数调整，M步骤$/;"	p	class:GMM_model	access:private	signature:()
+centroid	kmeans_head.h	/^	mat centroid;\/\/质心$/;"	m	class:kmeans_clusters	access:private
+cluster_num	kmeans_head.h	/^	int cluster_num;\/\/类别数$/;"	m	class:kmeans_clusters	access:private
+dim_num	GMM_head.h	/^	int dim_num;\/\/特征维数$/;"	m	class:GMM_model	access:private
+dim_num	kmeans_head.h	/^	int dim_num;\/\/特征维数$/;"	m	class:kmeans_clusters	access:private
+display	GMM.cpp	/^void GMM_model::display()$/;"	f	class:GMM_model	signature:()
+display	GMM_head.h	/^	void display();$/;"	p	class:GMM_model	access:public	signature:()
+display	kmeans.cpp	/^void kmeans_clusters::display()$/;"	f	class:kmeans_clusters	signature:()
+display	kmeans_head.h	/^	void display();$/;"	p	class:kmeans_clusters	access:public	signature:()
+gama	GMM_head.h	/^	mat gama;\/\/概率矩阵：每个点对应每个高斯分布的概率$/;"	m	class:GMM_model	access:private
+gauss_num	GMM_head.h	/^	int gauss_num;\/\/高斯数$/;"	m	class:GMM_model	access:private
+get_centroid	kmeans.cpp	/^void kmeans_clusters::get_centroid()$/;"	f	class:kmeans_clusters	signature:()
+get_centroid	kmeans_head.h	/^	void get_centroid();\/\/得到质心$/;"	p	class:kmeans_clusters	access:private	signature:()
+get_cluster_class	kmeans.cpp	/^void kmeans_clusters::get_cluster_class()$/;"	f	class:kmeans_clusters	signature:()
+get_cluster_class	kmeans_head.h	/^	void get_cluster_class();\/\/得到分类标签$/;"	p	class:kmeans_clusters	access:private	signature:()
+get_prob	GMM.cpp	/^double GMM_model::get_prob(const int i, const int k)$/;"	f	class:GMM_model	signature:(const int i, const int k)
+get_prob	GMM_head.h	/^	double get_prob(const int i, const int k);\/\/获取整体后验概率，E步骤$/;"	p	class:GMM_model	access:private	signature:(const int i, const int k)
+get_variance	kmeans.cpp	/^double kmeans_clusters::get_variance()$/;"	f	class:kmeans_clusters	signature:()
+get_variance	kmeans_head.h	/^	double get_variance();\/\/得到方差$/;"	p	class:kmeans_clusters	access:private	signature:()
+gmm_node	GMM_head.h	/^}gmm_node;$/;"	t	typeref:struct:node
+input_data	GMM.cpp	/^void GMM_model::input_data(const mat& in_data)$/;"	f	class:GMM_model	signature:(const mat& in_data)
+input_data	GMM_head.h	/^	void input_data(const mat& in_data);$/;"	p	class:GMM_model	access:public	signature:(const mat& in_data)
+input_data	kmeans.cpp	/^void kmeans_clusters::input_data(const mat& in_data)$/;"	f	class:kmeans_clusters	signature:(const mat& in_data)
+input_data	kmeans_head.h	/^	void input_data(const mat& in_data);$/;"	p	class:kmeans_clusters	access:public	signature:(const mat& in_data)
+kmeans_clusters	kmeans.cpp	/^kmeans_clusters::kmeans_clusters()$/;"	f	class:kmeans_clusters	signature:()
+kmeans_clusters	kmeans.cpp	/^kmeans_clusters::kmeans_clusters(const mat& in_data)$/;"	f	class:kmeans_clusters	signature:(const mat& in_data)
+kmeans_clusters	kmeans_head.h	/^	kmeans_clusters();$/;"	p	class:kmeans_clusters	access:public	signature:()
+kmeans_clusters	kmeans_head.h	/^	kmeans_clusters(const mat& in_data);$/;"	p	class:kmeans_clusters	access:public	signature:(const mat& in_data)
+kmeans_clusters	kmeans_head.h	/^class kmeans_clusters{$/;"	c
+kmeans_clusters::centroid	kmeans_head.h	/^	mat centroid;\/\/质心$/;"	m	class:kmeans_clusters	access:private
+kmeans_clusters::cluster_num	kmeans_head.h	/^	int cluster_num;\/\/类别数$/;"	m	class:kmeans_clusters	access:private
+kmeans_clusters::dim_num	kmeans_head.h	/^	int dim_num;\/\/特征维数$/;"	m	class:kmeans_clusters	access:private
+kmeans_clusters::display	kmeans.cpp	/^void kmeans_clusters::display()$/;"	f	class:kmeans_clusters	signature:()
+kmeans_clusters::display	kmeans_head.h	/^	void display();$/;"	p	class:kmeans_clusters	access:public	signature:()
+kmeans_clusters::get_centroid	kmeans.cpp	/^void kmeans_clusters::get_centroid()$/;"	f	class:kmeans_clusters	signature:()
+kmeans_clusters::get_centroid	kmeans_head.h	/^	void get_centroid();\/\/得到质心$/;"	p	class:kmeans_clusters	access:private	signature:()
+kmeans_clusters::get_cluster_class	kmeans.cpp	/^void kmeans_clusters::get_cluster_class()$/;"	f	class:kmeans_clusters	signature:()
+kmeans_clusters::get_cluster_class	kmeans_head.h	/^	void get_cluster_class();\/\/得到分类标签$/;"	p	class:kmeans_clusters	access:private	signature:()
+kmeans_clusters::get_variance	kmeans.cpp	/^double kmeans_clusters::get_variance()$/;"	f	class:kmeans_clusters	signature:()
+kmeans_clusters::get_variance	kmeans_head.h	/^	double get_variance();\/\/得到方差$/;"	p	class:kmeans_clusters	access:private	signature:()
+kmeans_clusters::input_data	kmeans.cpp	/^void kmeans_clusters::input_data(const mat& in_data)$/;"	f	class:kmeans_clusters	signature:(const mat& in_data)
+kmeans_clusters::input_data	kmeans_head.h	/^	void input_data(const mat& in_data);$/;"	p	class:kmeans_clusters	access:public	signature:(const mat& in_data)
+kmeans_clusters::kmeans_clusters	kmeans.cpp	/^kmeans_clusters::kmeans_clusters()$/;"	f	class:kmeans_clusters	signature:()
+kmeans_clusters::kmeans_clusters	kmeans.cpp	/^kmeans_clusters::kmeans_clusters(const mat& in_data)$/;"	f	class:kmeans_clusters	signature:(const mat& in_data)
+kmeans_clusters::kmeans_clusters	kmeans_head.h	/^	kmeans_clusters();$/;"	p	class:kmeans_clusters	access:public	signature:()
+kmeans_clusters::kmeans_clusters	kmeans_head.h	/^	kmeans_clusters(const mat& in_data);$/;"	p	class:kmeans_clusters	access:public	signature:(const mat& in_data)
+kmeans_clusters::label	kmeans_head.h	/^	vec label;\/\/数据类别$/;"	m	class:kmeans_clusters	access:private
+kmeans_clusters::raw_data	kmeans_head.h	/^	mat raw_data;\/\/原始数据$/;"	m	class:kmeans_clusters	access:private
+kmeans_clusters::samp_num	kmeans_head.h	/^	int samp_num;\/\/样本数$/;"	m	class:kmeans_clusters	access:private
+kmeans_clusters::train	kmeans.cpp	/^void kmeans_clusters::train(const int c_num)$/;"	f	class:kmeans_clusters	signature:(const int c_num)
+kmeans_clusters::train	kmeans_head.h	/^	void train(const int c_num);$/;"	p	class:kmeans_clusters	access:public	signature:(const int c_num)
+kmeans_clusters::~kmeans_clusters	kmeans.cpp	/^kmeans_clusters::~kmeans_clusters()$/;"	f	class:kmeans_clusters	signature:()
+kmeans_clusters::~kmeans_clusters	kmeans_head.h	/^	~kmeans_clusters();$/;"	p	class:kmeans_clusters	access:public	signature:()
+label	kmeans_head.h	/^	vec label;\/\/数据类别$/;"	m	class:kmeans_clusters	access:private
+main	GMM.cpp	/^int main()$/;"	f	signature:()
+main	kmeans.cpp	/^int main()$/;"	f	signature:()
+mat	global.h	/^typedef std::vector<vec> mat;$/;"	t
+miu	GMM_head.h	/^	vec miu;$/;"	m	struct:node	access:public
+node	GMM_head.h	/^typedef struct node{$/;"	s
+node::miu	GMM_head.h	/^	vec miu;$/;"	m	struct:node	access:public
+node::pi	GMM_head.h	/^	double pi;$/;"	m	struct:node	access:public
+node::sigam	GMM_head.h	/^	mat sigam;$/;"	m	struct:node	access:public
+para	GMM_head.h	/^	vector<gmm_node> para;\/\/高斯模型参数$/;"	m	class:GMM_model	access:private
+pi	GMM_head.h	/^	double pi;$/;"	m	struct:node	access:public
+probability	GMM.cpp	/^double GMM_model::probability(const vec& sample)$/;"	f	class:GMM_model	signature:(const vec& sample)
+probability	GMM_head.h	/^	double probability(const vec& sample);$/;"	p	class:GMM_model	access:public	signature:(const vec& sample)
+raw_data	GMM_head.h	/^	mat raw_data;\/\/原始数据$/;"	m	class:GMM_model	access:private
+raw_data	kmeans_head.h	/^	mat raw_data;\/\/原始数据$/;"	m	class:kmeans_clusters	access:private
+samp_num	GMM_head.h	/^	int samp_num;\/\/样本数$/;"	m	class:GMM_model	access:private
+samp_num	kmeans_head.h	/^	int samp_num;\/\/样本数$/;"	m	class:kmeans_clusters	access:private
+sigam	GMM_head.h	/^	mat sigam;$/;"	m	struct:node	access:public
+train	GMM.cpp	/^void GMM_model::train(const int g_num)$/;"	f	class:GMM_model	signature:(const int g_num)
+train	GMM_head.h	/^	void train(const int g_num);$/;"	p	class:GMM_model	access:public	signature:(const int g_num)
+train	kmeans.cpp	/^void kmeans_clusters::train(const int c_num)$/;"	f	class:kmeans_clusters	signature:(const int c_num)
+train	kmeans_head.h	/^	void train(const int c_num);$/;"	p	class:kmeans_clusters	access:public	signature:(const int c_num)
+variance	kmeans.cpp	/^inline double variance(const vec& vec1, const vec& vec2)$/;"	f	signature:(const vec& vec1, const vec& vec2)
+variance	kmeans_head.h	/^inline double variance(const vec& vec1, const vec& vec2);$/;"	p	signature:(const vec& vec1, const vec& vec2)
+vec	global.h	/^typedef std::vector<double> vec;$/;"	t
+~GMM_model	GMM.cpp	/^GMM_model::~GMM_model()$/;"	f	class:GMM_model	signature:()
+~GMM_model	GMM_head.h	/^	~GMM_model();$/;"	p	class:GMM_model	access:public	signature:()
+~kmeans_clusters	kmeans.cpp	/^kmeans_clusters::~kmeans_clusters()$/;"	f	class:kmeans_clusters	signature:()
+~kmeans_clusters	kmeans_head.h	/^	~kmeans_clusters();$/;"	p	class:kmeans_clusters	access:public	signature:()

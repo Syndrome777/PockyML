@@ -10,7 +10,7 @@ Algorithm
 ---------
 #### 1. k-means
 #### 2. GMM(Unfinished)
-
+#### 3. knn
 
 Author 
 ------
