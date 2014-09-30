@@ -34,6 +34,7 @@ GMM_model::train	GMM_head.h	/^	void train(const int g_num);$/;"	p	class:GMM_mode
 GMM_model::~GMM_model	GMM.cpp	/^GMM_model::~GMM_model()$/;"	f	class:GMM_model	signature:()
 GMM_model::~GMM_model	GMM_head.h	/^	~GMM_model();$/;"	p	class:GMM_model	access:public	signature:()
 _GMM_HEAD_H_	GMM_head.h	/^#define _GMM_HEAD_H_$/;"	d
+_KNN_HEAD_H_	knn_head.h	/^#define _KNN_HEAD_H_$/;"	d
 _Pocky_global_h_	global.h	/^#define _Pocky_global_h_$/;"	d
 _kmeans_head_h	kmeans_head.h	/^#define _kmeans_head_h$/;"	d
 adjust_para	GMM.cpp	/^void GMM_model::adjust_para()$/;"	f	class:GMM_model	signature:()
@@ -90,9 +91,13 @@ kmeans_clusters::train	kmeans.cpp	/^void kmeans_clusters::train(const int c_num)
 kmeans_clusters::train	kmeans_head.h	/^	void train(const int c_num);$/;"	p	class:kmeans_clusters	access:public	signature:(const int c_num)
 kmeans_clusters::~kmeans_clusters	kmeans.cpp	/^kmeans_clusters::~kmeans_clusters()$/;"	f	class:kmeans_clusters	signature:()
 kmeans_clusters::~kmeans_clusters	kmeans_head.h	/^	~kmeans_clusters();$/;"	p	class:kmeans_clusters	access:public	signature:()
+knn_	knn_head.h	/^		knn_;$/;"	m	class:knn_model	access:public
+knn_model	knn_head.h	/^class knn_model{$/;"	c
+knn_model::knn_	knn_head.h	/^		knn_;$/;"	m	class:knn_model	access:public
 label	kmeans_head.h	/^	vec label;\/\/数据类别$/;"	m	class:kmeans_clusters	access:private
 main	GMM.cpp	/^int main()$/;"	f	signature:()
 main	kmeans.cpp	/^int main()$/;"	f	signature:()
+main	knn.cpp	/^int main()$/;"	f	signature:()
 mat	global.h	/^typedef std::vector<vec> mat;$/;"	t
 miu	GMM_head.h	/^	vec miu;$/;"	m	struct:node	access:public
 node	GMM_head.h	/^typedef struct node{$/;"	s

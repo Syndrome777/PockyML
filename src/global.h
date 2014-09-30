@@ -18,10 +18,15 @@
 #include<iostream>
 #include<vector>
 #include<cmath>
-
+#include<algorithm>
 
 typedef std::vector<double> vec;
 typedef std::vector<vec> mat;
+
+const double MAX = 1e20;
+const double MIN = -1e20;
+
+
 
 /*
 vector二维数组的使用
