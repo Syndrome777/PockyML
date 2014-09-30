@@ -20,7 +20,7 @@ void knn_model::input_data(const mat& in_data, const vec& in_data_lab)
 	dim_num = in_data[0].size();
 	for(int i = 0; i < in_data.size(); i++){
 		vec temp;
-		for(int j = 0; j < in_data.size(); i++)
+		for(int j = 0; j < in_data[0].size(); j++)
 			temp.push_back(in_data[i][j]);
 		raw_data.push_back(temp);
 		label.push_back(in_data_lab[i]);
@@ -36,8 +36,7 @@ int knn_model::classification(const vec& data_vec, const int k)
 	int resl = 0;
 	
 	for(int i = 0; i < samp_num; i++){
-		dis.push_back(1);
-		Edistance(data_vec, raw_data[i]);
+		dis.push_back(Edistance(data_vec, raw_data[i]));
 		
 	}
 	
@@ -49,6 +48,7 @@ int knn_model::classification(const vec& data_vec, const int k)
 			if(dis_copy[j] == dis[i]){
 				resl_lab.push_back(label[j]);
 				dis_copy[j] = 0;
+				break;
 			}
 	}
 	
@@ -96,20 +96,72 @@ inline double Edistance(const vec& vec1, const vec& vec2)
 
 
 
-
-
 int main()
 {
+	knn_model myknn;
+	double input;
+	mat test_data(10);
+	vec label;
+	vec try_data;
+	mat try_data2;
 
+	for (int i = 0; i < 10; i++)
+		test_data[i].resize(3);
+	for (int i = 0; i < 10; i++){
+		for (int j = 0; j < 3; j++){
+			cin >> input;
+			test_data[i][j] = input;
+		}
+		cin >> input;
+		label.push_back(input);
+	}
 
-	
-	
-	
+	myknn.input_data(test_data, label);
+
+	try_data.push_back(1);
+	try_data.push_back(2);
+	try_data.push_back(1);
+
+	int result = myknn.classification(try_data,3);
+	cout << "try_data result : " << result << endl;
+
+	try_data2.push_back(try_data);
+	try_data[0] = 30;
+	try_data[0] = 40;
+	try_data[0] = 50;
+	try_data2.push_back(try_data);
+
+	vec result2 = myknn.classification(try_data2, 3);
+	cout << "try_data2 result : " << result2[0] << "   " << result2[1] << endl;
+
+	getchar(); getchar();
 	return 0;
 }
 
 
+/*
+test data:
 
+1 2 3 3
+2 3 4 1
+2 7 9 1
+6 8 9 1
+100 200 100 4
+1 2 1 3
+4 5 2 1
+11 23 10 4
+2 34 12 4
+44 31 11 4
+
+k:
+3
+
+
+result:
+try_data result : 3
+try_data result2 : 3   4
+
+*/
 
 
 
