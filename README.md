@@ -11,6 +11,8 @@ Algorithm
 #### 1. k-means
 #### 2. GMM(Unfinished)
 #### 3. knn
+#### 4. SVM(based on LibSVM)
+
 
 Author 
 ------
