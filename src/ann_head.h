@@ -10,7 +10,11 @@ using namespace std;
 class ann_model{
 	public:
 		ann_model();
+		ann_model(const mat& in_data);
 		~ann_model();
+		void input_data(const mat& in_data);
+		void train();
+		
 
 	private:
 		mat raw_data;//原始数据
