@@ -9,10 +9,10 @@ I'm a novice in ML, but I think I love it. So I will try my best to write this t
 Algorithm 
 ---------
 #### 1. k-means
-#### 2. GMM(Unfinished)
-#### 3. KNN
-#### 4. SVM(based on LibSVM)
-
+#### 2. GMM(Gaussian Mixture Model, Unfinished)
+#### 3. KNN(K-Nearest Neighbor)
+#### 4. SVM(Suport Vector Machine, based on LibSVM)
+#### 5. ANN(Artifical Neural Network, Unfinished)
 
 Author 
 ------
