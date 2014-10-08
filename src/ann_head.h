@@ -24,20 +24,25 @@ class ann_model{
 		int samp_num;//样本数目
 		int dim_num;//样本维度
 		int class_num;//类的数目
-	
+		map<double,int> label_2_num;//标签转数字，确定class_num，防止label的中断，如label为1，2，4。。。
+		
 		//模型参数
 		double learn_rate;//学习速率
 		int node_num;//隐层节点数
 		int max_iter;//iteration,最大迭代次数
+		double min_error;//最小总误差
+		mat result_mat;//结果输出矩阵，并非真实标签
+		//vec mid;//隐藏层数据
 		
 		mat W;//输入层和隐层间的连接权值，应为dim_num*node_num的矩阵
 		vec W_a;//隐层阀值，长度node_num的向量
 		mat V;//隐层和输出层间的连接权值，应为node_num*class_num的矩阵
 		vec V_b;//输出层阀值，长度为class_num的向量
 
-		double output_error(const vec& ans, const vec& res);//计算输出标签和真实标签的误差，为全局误差　
+		double error_all(const mat& res);//输入为模型的输出标签，sample_num * class_num，并没用转换为真实标签
+		double error_one(const double lab, const vec& res);//计算输出标签和真实标签的误差，为全局误差　
 		vec prediction(const vec& in_data);//输出层结果预测，基于W和V矩阵
-		vec correction();//参数修正，基于W,V误差修正
+		void correction();//参数修正，基于W,V误差修正
 
 		inline double sigmoid(const double x);//activation function，激活函数
 		inline double get_rand();//随机数[-1,1]

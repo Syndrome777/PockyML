@@ -33,15 +33,14 @@ void ann_model::init(const int node_n)
 {
 	node_num = node_n;
 
-	map<int,int> label_2_num;//标签转数字，确定class_num，防止label的中断，如label为1，2，4。。。
-	int cnum = 1;
+	int cnum = 0;
 	for(int i = 0; i < label.size(); i++){
 		if(!label_2_num[label[i]]){
 			label_2_num[label[i]] = cnum;
 			cnum++;
 		}
 	}
-	class_num = cnum - 1;
+	class_num = cnum;
 
 
 	for(int i = 0; i < dim_num; i++ ){
@@ -78,33 +77,64 @@ vec ann_model::prediction(const vec& in_data)
 	vec mid;
 	vec temp;
 	vec resl;
+	double mid_res;
 
-	//输入层到隐层的映射
+	//输入层到隐层的映射，通过sigmoid函数
 	for(int i = 0; i < node_num; i++){
 		for(int j = 0; j < dim_num; j++)
 			temp.push_back(W[j][i]);
-		mid.push_back(multiplication(in_data, temp)- W_a[i]);
+		mid_res = multiplication(in_data, temp)- W_a[i];
+		mid.push_back(sigmoid(mid_res));
 		temp.clear();
 	}
 
-	//隐层到输出层的映射
+	//隐层到输出层的映射，通过sigmoid函数
 	for(int i = 0; i < class_num; i++){
 		for(int j = 0; j < node_num; j++)
 			temp.push_back(V[j][i]);
-		resl.push_back(multiplication(mid, temp) - V_b[i]);
+		mid_res = multiplication(mid, temp) - V_b[i];
+		resl.push_back(sigmoid(mid_res));
+		temp.clear();
 	}
 
 	return resl;
 }
 
 
-double ann_model::output_error(const vec& ans, const vec& res)
+void ann_model::correction()
 {
+
+}
+
+
+
+
+
+double ann_model::error_all(const mat& res)
+{
+	double Eor = 0;
+	for(int i = 0; i < samp_num; i++ ){
+		Eor = Eor + error_one(label[i],res[i]);
+	}
+	return Eor;
+}
+
+
+double ann_model::error_one(const double lab, const vec& res)
+{
+	vec ans;
+	for(int i = 0; i < class_num; i++){
+		if(i != label_2_num[lab])
+			ans.push_back(0);
+		else
+			ans.push_back(1);
+	}
+
 	double Eor = 0.0;
 	for(int i = 0; i < samp_num; i++){
 		Eor = Eor + 1.0 * (ans[i] - res[i]) * (ans[i] - res[i]);
 	}
-	Eor = Eor / (2 * samp_num);
+	Eor = Eor / (2 * class_num);
 	return Eor;
 }
 
@@ -112,7 +142,7 @@ double ann_model::output_error(const vec& ans, const vec& res)
 
 inline double ann_model::sigmoid(const double x)
 {
-	return 1.0/(1+exp(-0.0001*x));
+	return 1.0/(1+exp(-1.0*x));
 }
 
 
