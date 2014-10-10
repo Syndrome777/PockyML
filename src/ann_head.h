@@ -14,7 +14,7 @@ class ann_model{
 		~ann_model();
 		void init(const int node_n);//初始化层间连接权值和学习速率
 		void input_data(const mat& in_data, const vec& in_data_lab);
-		void train(const int node_n);
+		void train();//train for the model and parameters
 		
 
 	private:
@@ -31,7 +31,8 @@ class ann_model{
 		int node_num;//隐层节点数
 		int max_iter;//iteration,最大迭代次数
 		double min_error;//最小总误差
-		mat result_mat;//结果输出矩阵，并非真实标签
+		mat result_mat;//结果输出矩阵，并非真实标签，samp_num*class_num
+		mat answer_mat;//真实标签矩阵,samp_num*class_num
 		//vec mid;//隐藏层数据
 		
 		mat W;//输入层和隐层间的连接权值，应为dim_num*node_num的矩阵
@@ -40,9 +41,9 @@ class ann_model{
 		vec V_b;//输出层阀值，长度为class_num的向量
 
 		double error_all(const mat& res);//输入为模型的输出标签，sample_num * class_num，并没用转换为真实标签
-		double error_one(const double lab, const vec& res);//计算输出标签和真实标签的误差，为全局误差　
-		vec prediction(const vec& in_data);//输出层结果预测，基于W和V矩阵
-		void correction();//参数修正，基于W,V误差修正
+		double error_one(const vec& ans1, const vec& res1);//计算输出标签和真实标签的误差，为全局误差　
+		vec prediction(const vec& in_data, vec& mid);//输出层结果预测，基于W和V矩阵
+		void correction(const vec& in_d, const vec& mid_d, const vec& out_d, const vec& ans_d);//参数修正，基于W,V误差修正
 
 		inline double sigmoid(const double x);//activation function，激活函数
 		inline double get_rand();//随机数[-1,1]
