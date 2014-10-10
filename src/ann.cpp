@@ -32,13 +32,14 @@ void ann_model::input_data(const mat& in_data, const vec& in_data_lab)
 void ann_model::init(const int node_n)
 {
 	node_num = node_n;
-	max_iter = 1000;
+	max_iter = 200;
 	min_error = 0.00001;
+	learn_rate = 0.2;
 	
 	//class_num的确定
 	int cnum = 0;
 	for(int i = 0; i < label.size(); i++){
-		if(!label_2_num[label[i]]){
+		if(!label_2_num.count(label[i])){
 			label_2_num[label[i]] = cnum;
 			cnum++;
 		}
@@ -100,21 +101,24 @@ void ann_model::train()
 	//3.计算总误差，并判断
 	//4.回到1
 	int iter = 1;
-	double err_all;
+	double err_all = MAX;;
 	while(!(err_all < min_error || iter > max_iter)){
 		iter++;
 		for(int i = 0; i < samp_num; i++){
 			vec temp_in, temp_mid, temp_out, temp_ans;
 			temp_in = raw_data[i];
 			temp_out = prediction(temp_in, temp_mid);
+			temp_ans = answer_mat[i];
 			//输出结果矩阵的更新	
 			result_mat[i] = temp_out;
 			correction(temp_in, temp_mid, temp_out, temp_ans);	
 			temp_in.clear();temp_mid.clear();temp_out.clear();temp_out.clear();
 		}
 		err_all = error_all(result_mat);
+		cout << "the iteration is " << iter - 1 << "\t the error is " << err_all << endl;
 
 	}
+	
 }
 
 
@@ -230,12 +234,44 @@ double ann_model::error_all(const mat& res)
 double ann_model::error_one(const vec& ans, const vec& res)
 {
 	double Eor = 0.0;
-	for(int i = 0; i < samp_num; i++){
+	for(int i = 0; i < class_num; i++){
 		Eor = Eor + 1.0 * (ans[i] - res[i]) * (ans[i] - res[i]);
 	}
 	Eor = Eor / (2 * class_num);
 	return Eor;
 }
+
+
+
+vec ann_model::classifcation(const mat& t_data)
+{
+	vec resl;
+	int test_num = t_data.size();
+	for (int i = 0; i < test_num; i++){
+		vec mid;
+		vec temp = prediction(t_data[i], mid);
+		int max_ind = 0;
+		double ind_data = MIN;
+		for (int j = 0; j < class_num; j++){
+			if (temp[j] > ind_data){
+				max_ind = j;
+				ind_data = temp[j];
+			}
+		}
+		map<double, int>::const_iterator iter;
+		for (iter = label_2_num.begin(); iter != label_2_num.end(); iter++){
+			if (iter->second == max_ind)
+				resl.push_back(iter->first);
+		}
+		cout << label [i] << ": "<< temp[0] << " " << temp[1] << " " << temp[2] << endl;
+	}
+	return resl;
+}
+
+
+
+
+
 
 
 
@@ -260,6 +296,9 @@ inline double multiplication(const vec& vec1, const vec& vec2)
 	}
 	return res;
 }
+
+
+
 
 
 
