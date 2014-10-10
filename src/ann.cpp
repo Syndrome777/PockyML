@@ -32,9 +32,15 @@ void ann_model::input_data(const mat& in_data, const vec& in_data_lab)
 void ann_model::init(const int node_n)
 {
 	node_num = node_n;
+<<<<<<< HEAD
 	max_iter = 20000;
 	min_error = 0.00001;
 	learn_rate = 0.01;
+=======
+	max_iter = 200;
+	min_error = 0.00001;
+	learn_rate = 0.2;
+>>>>>>> FETCH_HEAD
 	
 	//class_num的确定
 	int cnum = 0;

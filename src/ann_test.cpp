@@ -7,7 +7,11 @@ int main()
 {
 	mat data;
 	vec lab;
+<<<<<<< HEAD
 	ifstream file("test_data.txt");
+=======
+	ifstream file("C:\\Users\\Hua\\Documents\\GitHub\\PockyML\\src\\test_data.txt");
+>>>>>>> FETCH_HEAD
 	for (int i = 0; i < 150; i++){
 		vec temp;
 		double a;
