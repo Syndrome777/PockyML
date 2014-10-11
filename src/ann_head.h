@@ -16,6 +16,7 @@ class ann_model{
 		void input_data(const mat& in_data, const vec& in_data_lab);
 		void train();//train for the model and parameters
 		vec classifcation(const mat& t_data);//预测
+		void parameter_setting(const double learn_r, const int max_i, const double min_e);//parameter setting,the num of hidden nodes, the rate of learning, the max iteration, the min of error
 		
 
 	private:
@@ -31,7 +32,7 @@ class ann_model{
 		double learn_rate;//学习速率
 		int node_num;//隐层节点数
 		int max_iter;//iteration,最大迭代次数
-		double min_error;//最小总误差
+		double min_error;//最小前后误差差，err_all-err_pre
 		mat result_mat;//结果输出矩阵，并非真实标签，samp_num*class_num
 		mat answer_mat;//真实标签矩阵,samp_num*class_num
 		//vec mid;//隐藏层数据
@@ -41,6 +42,7 @@ class ann_model{
 		mat V;//隐层和输出层间的连接权值，应为node_num*class_num的矩阵
 		vec V_b;//输出层阀值，长度为class_num的向量
 
+		
 		double error_all(const mat& res);//输入为模型的输出标签，sample_num * class_num，并没用转换为真实标签
 		double error_one(const vec& ans1, const vec& res1);//计算输出标签和真实标签的误差，为全局误差　
 		vec prediction(const vec& in_data, vec& mid);//输出层结果预测，基于W和V矩阵

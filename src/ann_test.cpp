@@ -7,11 +7,8 @@ int main()
 {
 	mat data;
 	vec lab;
-<<<<<<< HEAD
 	ifstream file("test_data.txt");
-=======
-	ifstream file("C:\\Users\\Hua\\Documents\\GitHub\\PockyML\\src\\test_data.txt");
->>>>>>> FETCH_HEAD
+	//ifstream file("C:\\Users\\Hua\\Documents\\GitHub\\PockyML\\src\\test_data.txt");
 	for (int i = 0; i < 150; i++){
 		vec temp;
 		double a;
@@ -27,7 +24,10 @@ int main()
 	cout << "success to input data" << endl;
 
 	ann_model myANN(data,lab);
-	myANN.init(10);
+	//set the num of hidden nodes
+	myANN.init(5);
+	//set other parameters
+	myANN.parameter_setting(0.02, 80000, 0.000000001);
 	myANN.train();
 
 	cout << "the labels of the test data" << endl;

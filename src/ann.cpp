@@ -32,15 +32,9 @@ void ann_model::input_data(const mat& in_data, const vec& in_data_lab)
 void ann_model::init(const int node_n)
 {
 	node_num = node_n;
-<<<<<<< HEAD
-	max_iter = 20000;
-	min_error = 0.00001;
+	max_iter = 10000;
+	min_error = 0.0000001;
 	learn_rate = 0.01;
-=======
-	max_iter = 200;
-	min_error = 0.00001;
-	learn_rate = 0.2;
->>>>>>> FETCH_HEAD
 	
 	//class_num的确定
 	int cnum = 0;
@@ -107,8 +101,10 @@ void ann_model::train()
 	//3.计算总误差，并判断
 	//4.回到1
 	int iter = 1;
-	double err_all = MAX;;
-	while(!(err_all < min_error || iter > max_iter)){
+	double err_all = MAX;
+	double err_pre = MIN;//前一次误差情况
+	while(!(fabs(err_all - err_pre) < min_error || iter > max_iter)){
+		err_pre = err_all;
 		iter++;
 		for(int i = 0; i < samp_num; i++){
 			vec temp_in, temp_mid, temp_out, temp_ans;
@@ -124,6 +120,8 @@ void ann_model::train()
 		cout << "the iteration is " << iter - 1 << "\t the error is " << err_all << endl;
 
 	}
+	cout<<"the training is over!"<<endl;
+	system("pause");
 	
 }
 
@@ -276,6 +274,14 @@ vec ann_model::classifcation(const mat& t_data)
 
 
 
+void ann_model::parameter_setting(const double learn_r, const int max_i, const double min_e)
+{
+	learn_rate = learn_r;
+	max_iter = max_i;
+	min_error = min_e;
+
+	cout<<"parameter setting is succeed!"<<endl;
+}
 
 
 
