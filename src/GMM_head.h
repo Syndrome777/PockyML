@@ -36,6 +36,10 @@ private:
 };
 
 
+
+
+inline double gaussian(const vec& mu, const mat& sigma);
+
 #endif // !
 
 

@@ -15,7 +15,7 @@ class ann_model{
 		void init(const int node_n);//初始化层间连接权值和学习速率
 		void input_data(const mat& in_data, const vec& in_data_lab);
 		void train();//train for the model and parameters
-		vec classifcation(const mat& t_data);//预测
+		vec classification(const mat& t_data);//预测
 		void parameter_setting(const double learn_r, const int max_i, const double min_e);//parameter setting,the num of hidden nodes, the rate of learning, the max iteration, the min of error
 		
 

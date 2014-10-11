@@ -1,4 +1,4 @@
-#include"ann_head.h"
+#include"nb_head.h"
 #include"global.h"
 #include <fstream>
 
@@ -23,17 +23,20 @@ int main()
 	}
 	cout << "success to input data" << endl;
 
-	ann_model myANN(data,lab);
+	//ann_model myANN(data,lab);
 	//set the num of hidden nodes
-	myANN.init(10);
+	//myANN.init(10);
 	//set other parameters
-	myANN.parameter_setting(0.02, 80000, 0.000000001);
-	myANN.train();
+	//myANN.parameter_setting(0.02, 80000, 0.000000001);
+	//myANN.train();
+
+	nb_model myNB(data,lab);
+	myNB.train();
 
 	cout << "the labels of the test data" << endl;
 	vec test_lab;
 	int rig = 0;
-	test_lab = myANN.classification(data);
+	test_lab = myNB.classification(data);
 	for (int i = 0; i < test_lab.size(); i++)
 		if (test_lab[i] == lab[i])
 			rig++;
@@ -42,3 +45,4 @@ int main()
 	system("pause");
 	return 0;
 }
+

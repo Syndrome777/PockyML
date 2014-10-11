@@ -247,7 +247,7 @@ double ann_model::error_one(const vec& ans, const vec& res)
 
 
 
-vec ann_model::classifcation(const mat& t_data)
+vec ann_model::classification(const mat& t_data)
 {
 	vec resl;
 	int test_num = t_data.size();
@@ -267,7 +267,7 @@ vec ann_model::classifcation(const mat& t_data)
 			if (iter->second == max_ind)
 				resl.push_back(iter->first);
 		}
-		cout << label [i] << ": "<< temp[0] << " " << temp[1] << " " << temp[2] << endl;
+		//cout << label [i] << ": "<< temp[0] << " " << temp[1] << " " << temp[2] << endl;
 	}
 	return resl;
 }

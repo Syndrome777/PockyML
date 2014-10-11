@@ -26,7 +26,7 @@ typedef std::vector<vec> mat;
 
 const double MAX = 1e20;
 const double MIN = -1e20;
-
+const double PI = 3.1415926;
 
 
 /*
