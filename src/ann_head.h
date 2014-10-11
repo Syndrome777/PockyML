@@ -1,5 +1,5 @@
-#ifndef _ANN_HEAD_H
-#define _ANN_HEAD_H
+#ifndef _ANN_HEAD_H_
+#define _ANN_HEAD_H_
 
 
 #include"global.h"

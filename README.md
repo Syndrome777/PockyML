@@ -12,8 +12,10 @@ Algorithm
 #### 2. GMM (Gaussian Mixture Model, Unfinished)
 #### 3. KNN (K-Nearest Neighbor)
 #### 4. SVM (Suport Vector Machine, based on LibSVM)
-#### 5. ANN (Artifical Neural Network, Unfinished)
+#### 5. ANN (Artifical Neural Network)
 #### 6. PCA (Principal Component Analysis)
+#### 7. NB (Naive Bayesian, Unfinished)
+
 
 Author 
 ------

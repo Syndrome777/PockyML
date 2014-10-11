@@ -4,6 +4,8 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+Edistance	knn.cpp	/^inline double Edistance(const vec& vec1, const vec& vec2)$/;"	f	signature:(const vec& vec1, const vec& vec2)
+Edistance	knn_head.h	/^inline double Edistance(const vec& vec1, const vec& vec2);\/\/Euclidean distance,欧式距离$/;"	p	signature:(const vec& vec1, const vec& vec2)
 GMM_model	GMM.cpp	/^GMM_model::GMM_model()$/;"	f	class:GMM_model	signature:()
 GMM_model	GMM.cpp	/^GMM_model::GMM_model(const mat& in_data)$/;"	f	class:GMM_model	signature:(const mat& in_data)
 GMM_model	GMM_head.h	/^	GMM_model();$/;"	p	class:GMM_model	access:public	signature:()
@@ -33,20 +35,122 @@ GMM_model::train	GMM.cpp	/^void GMM_model::train(const int g_num)$/;"	f	class:GM
 GMM_model::train	GMM_head.h	/^	void train(const int g_num);$/;"	p	class:GMM_model	access:public	signature:(const int g_num)
 GMM_model::~GMM_model	GMM.cpp	/^GMM_model::~GMM_model()$/;"	f	class:GMM_model	signature:()
 GMM_model::~GMM_model	GMM_head.h	/^	~GMM_model();$/;"	p	class:GMM_model	access:public	signature:()
+MAX	global.h	/^const double MAX = 1e20;$/;"	v
+MIN	global.h	/^const double MIN = -1e20;$/;"	v
+PCA_model	PCA/include/PCA_head.h	/^		PCA_model();$/;"	p	class:PCA_model	access:public	signature:()
+PCA_model	PCA/include/PCA_head.h	/^		PCA_model(vector<vector<double>> data,int anum,int afea);$/;"	p	class:PCA_model	access:public	signature:(vector<vector<double>> data,int anum,int afea)
+PCA_model	PCA/include/PCA_head.h	/^class PCA_model{$/;"	c
+PCA_model	PCA/src/PCA.cpp	/^PCA_model::PCA_model(){$/;"	f	class:PCA_model	signature:()
+PCA_model	PCA/src/PCA.cpp	/^PCA_model::PCA_model(vector<vector<double>> data,int anum,int afea){	$/;"	f	class:PCA_model	signature:(vector<vector<double>> data,int anum,int afea)
+PCA_model::PCA_model	PCA/include/PCA_head.h	/^		PCA_model();$/;"	p	class:PCA_model	access:public	signature:()
+PCA_model::PCA_model	PCA/include/PCA_head.h	/^		PCA_model(vector<vector<double>> data,int anum,int afea);$/;"	p	class:PCA_model	access:public	signature:(vector<vector<double>> data,int anum,int afea)
+PCA_model::PCA_model	PCA/src/PCA.cpp	/^PCA_model::PCA_model(){$/;"	f	class:PCA_model	signature:()
+PCA_model::PCA_model	PCA/src/PCA.cpp	/^PCA_model::PCA_model(vector<vector<double>> data,int anum,int afea){	$/;"	f	class:PCA_model	signature:(vector<vector<double>> data,int anum,int afea)
+PCA_model::cov	PCA/include/PCA_head.h	/^		vector<vector<double>> cov;\/\/Э�������$/;"	m	class:PCA_model	access:private
+PCA_model::eigenvalue	PCA/include/PCA_head.h	/^		vector<double> eigenvalue;\/\/����ֵ$/;"	m	class:PCA_model	access:public
+PCA_model::eigenvector	PCA/include/PCA_head.h	/^		vector<vector<double>> eigenvector;\/\/������������$/;"	m	class:PCA_model	access:public
+PCA_model::fea	PCA/include/PCA_head.h	/^		int fea;\/\/����ά��$/;"	m	class:PCA_model	access:private
+PCA_model::mean	PCA/include/PCA_head.h	/^		vector<double> mean;\/\/ƽ��ֵ		$/;"	m	class:PCA_model	access:private
+PCA_model::num	PCA/include/PCA_head.h	/^		int num;\/\/������$/;"	m	class:PCA_model	access:private
+PCA_model::pca_solve_eig	PCA/include/PCA_head.h	/^		int pca_solve_eig();$/;"	p	class:PCA_model	access:public	signature:()
+PCA_model::pca_solve_eig	PCA/src/PCA.cpp	/^int PCA_model::pca_solve_eig()$/;"	f	class:PCA_model	signature:()
+PCA_model::print	PCA/include/PCA_head.h	/^		void print();$/;"	p	class:PCA_model	access:public	signature:()
+PCA_model::print	PCA/src/PCA.cpp	/^void PCA_model::print()$/;"	f	class:PCA_model	signature:()
+PCA_model::~PCA_model	PCA/include/PCA_head.h	/^		~PCA_model();$/;"	p	class:PCA_model	access:public	signature:()
+PCA_model::~PCA_model	PCA/src/PCA.cpp	/^PCA_model::~PCA_model(){$/;"	f	class:PCA_model	signature:()
+V	ann_head.h	/^		mat V;\/\/隐层和输出层间的连接权值，应为node_num*class_num的矩阵$/;"	m	class:ann_model	access:private
+V_b	ann_head.h	/^		vec V_b;\/\/输出层阀值，长度为class_num的向量$/;"	m	class:ann_model	access:private
+W	ann_head.h	/^		mat W;\/\/输入层和隐层间的连接权值，应为dim_num*node_num的矩阵$/;"	m	class:ann_model	access:private
+W_a	ann_head.h	/^		vec W_a;\/\/隐层阀值，长度node_num的向量$/;"	m	class:ann_model	access:private
+_ANN_HEAD_H	ann_head.h	/^#define _ANN_HEAD_H$/;"	d
 _GMM_HEAD_H_	GMM_head.h	/^#define _GMM_HEAD_H_$/;"	d
 _KNN_HEAD_H_	knn_head.h	/^#define _KNN_HEAD_H_$/;"	d
+_NB_HEAD_H_	nb_head.h	/^#define _NB_HEAD_H_$/;"	d
+_PCA_head_H_	PCA/include/PCA_head.h	/^#define _PCA_head_H_$/;"	d
 _Pocky_global_h_	global.h	/^#define _Pocky_global_h_$/;"	d
 _kmeans_head_h	kmeans_head.h	/^#define _kmeans_head_h$/;"	d
 adjust_para	GMM.cpp	/^void GMM_model::adjust_para()$/;"	f	class:GMM_model	signature:()
 adjust_para	GMM_head.h	/^	void adjust_para();\/\/����������M����$/;"	p	class:GMM_model	access:private	signature:()
+ann_model	ann.cpp	/^ann_model::ann_model()$/;"	f	class:ann_model	signature:()
+ann_model	ann.cpp	/^ann_model::ann_model(const mat& in_data, const vec& in_data_lab)$/;"	f	class:ann_model	signature:(const mat& in_data, const vec& in_data_lab)
+ann_model	ann_head.h	/^		ann_model();$/;"	p	class:ann_model	access:public	signature:()
+ann_model	ann_head.h	/^		ann_model(const mat& in_data, const vec& in_data_lab);$/;"	p	class:ann_model	access:public	signature:(const mat& in_data, const vec& in_data_lab)
+ann_model	ann_head.h	/^class ann_model{$/;"	c
+ann_model::V	ann_head.h	/^		mat V;\/\/隐层和输出层间的连接权值，应为node_num*class_num的矩阵$/;"	m	class:ann_model	access:private
+ann_model::V_b	ann_head.h	/^		vec V_b;\/\/输出层阀值，长度为class_num的向量$/;"	m	class:ann_model	access:private
+ann_model::W	ann_head.h	/^		mat W;\/\/输入层和隐层间的连接权值，应为dim_num*node_num的矩阵$/;"	m	class:ann_model	access:private
+ann_model::W_a	ann_head.h	/^		vec W_a;\/\/隐层阀值，长度node_num的向量$/;"	m	class:ann_model	access:private
+ann_model::ann_model	ann.cpp	/^ann_model::ann_model()$/;"	f	class:ann_model	signature:()
+ann_model::ann_model	ann.cpp	/^ann_model::ann_model(const mat& in_data, const vec& in_data_lab)$/;"	f	class:ann_model	signature:(const mat& in_data, const vec& in_data_lab)
+ann_model::ann_model	ann_head.h	/^		ann_model();$/;"	p	class:ann_model	access:public	signature:()
+ann_model::ann_model	ann_head.h	/^		ann_model(const mat& in_data, const vec& in_data_lab);$/;"	p	class:ann_model	access:public	signature:(const mat& in_data, const vec& in_data_lab)
+ann_model::answer_mat	ann_head.h	/^		mat answer_mat;\/\/真实标签矩阵,samp_num*class_num$/;"	m	class:ann_model	access:private
+ann_model::class_num	ann_head.h	/^		int class_num;\/\/类的数目$/;"	m	class:ann_model	access:private
+ann_model::classifcation	ann.cpp	/^vec ann_model::classifcation(const mat& t_data)$/;"	f	class:ann_model	signature:(const mat& t_data)
+ann_model::classifcation	ann_head.h	/^		vec classifcation(const mat& t_data);\/\/预测$/;"	p	class:ann_model	access:public	signature:(const mat& t_data)
+ann_model::correction	ann.cpp	/^void ann_model::correction(const vec& in_d, const vec& mid_d, const vec& out_d, const vec& ans_d)$/;"	f	class:ann_model	signature:(const vec& in_d, const vec& mid_d, const vec& out_d, const vec& ans_d)
+ann_model::correction	ann_head.h	/^		void correction(const vec& in_d, const vec& mid_d, const vec& out_d, const vec& ans_d);\/\/参数修正，基于W,V误差修正$/;"	p	class:ann_model	access:private	signature:(const vec& in_d, const vec& mid_d, const vec& out_d, const vec& ans_d)
+ann_model::dim_num	ann_head.h	/^		int dim_num;\/\/样本维度$/;"	m	class:ann_model	access:private
+ann_model::error_all	ann.cpp	/^double ann_model::error_all(const mat& res)$/;"	f	class:ann_model	signature:(const mat& res)
+ann_model::error_all	ann_head.h	/^		double error_all(const mat& res);\/\/输入为模型的输出标签，sample_num * class_num，并没用转换为真实标签$/;"	p	class:ann_model	access:private	signature:(const mat& res)
+ann_model::error_one	ann.cpp	/^double ann_model::error_one(const vec& ans, const vec& res)$/;"	f	class:ann_model	signature:(const vec& ans, const vec& res)
+ann_model::error_one	ann_head.h	/^		double error_one(const vec& ans1, const vec& res1);\/\/计算输出标签和真实标签的误差，为全局误差　$/;"	p	class:ann_model	access:private	signature:(const vec& ans1, const vec& res1)
+ann_model::get_rand	ann.cpp	/^inline double ann_model::get_rand()$/;"	f	class:ann_model	signature:()
+ann_model::get_rand	ann_head.h	/^		inline double get_rand();\/\/随机数[-1,1]$/;"	p	class:ann_model	access:private	signature:()
+ann_model::init	ann.cpp	/^void ann_model::init(const int node_n)$/;"	f	class:ann_model	signature:(const int node_n)
+ann_model::init	ann_head.h	/^		void init(const int node_n);\/\/初始化层间连接权值和学习速率$/;"	p	class:ann_model	access:public	signature:(const int node_n)
+ann_model::input_data	ann.cpp	/^void ann_model::input_data(const mat& in_data, const vec& in_data_lab)$/;"	f	class:ann_model	signature:(const mat& in_data, const vec& in_data_lab)
+ann_model::input_data	ann_head.h	/^		void input_data(const mat& in_data, const vec& in_data_lab);$/;"	p	class:ann_model	access:public	signature:(const mat& in_data, const vec& in_data_lab)
+ann_model::label	ann_head.h	/^		vec label;\/\/标签数据$/;"	m	class:ann_model	access:private
+ann_model::label_2_num	ann_head.h	/^		map<double,int> label_2_num;\/\/标签转数字，确定class_num，防止label的中断，如label为1，2，4。。。$/;"	m	class:ann_model	access:private
+ann_model::learn_rate	ann_head.h	/^		double learn_rate;\/\/学习速率$/;"	m	class:ann_model	access:private
+ann_model::max_iter	ann_head.h	/^		int max_iter;\/\/iteration,最大迭代次数$/;"	m	class:ann_model	access:private
+ann_model::min_error	ann_head.h	/^		double min_error;\/\/最小前后误差差，err_all-err_pre$/;"	m	class:ann_model	access:private
+ann_model::node_num	ann_head.h	/^		int node_num;\/\/隐层节点数$/;"	m	class:ann_model	access:private
+ann_model::parameter_setting	ann.cpp	/^void ann_model::parameter_setting(const double learn_r, const int max_i, const double min_e)$/;"	f	class:ann_model	signature:(const double learn_r, const int max_i, const double min_e)
+ann_model::parameter_setting	ann_head.h	/^		void parameter_setting(const double learn_r, const int max_i, const double min_e);\/\/parameter setting,the num of hidden nodes, the rate of learning, the max iteration, the min of error$/;"	p	class:ann_model	access:public	signature:(const double learn_r, const int max_i, const double min_e)
+ann_model::prediction	ann.cpp	/^vec ann_model::prediction(const vec& in_data, vec& mid)$/;"	f	class:ann_model	signature:(const vec& in_data, vec& mid)
+ann_model::prediction	ann_head.h	/^		vec prediction(const vec& in_data, vec& mid);\/\/输出层结果预测，基于W和V矩阵$/;"	p	class:ann_model	access:private	signature:(const vec& in_data, vec& mid)
+ann_model::raw_data	ann_head.h	/^		mat raw_data;\/\/原始数据$/;"	m	class:ann_model	access:private
+ann_model::result_mat	ann_head.h	/^		mat result_mat;\/\/结果输出矩阵，并非真实标签，samp_num*class_num$/;"	m	class:ann_model	access:private
+ann_model::samp_num	ann_head.h	/^		int samp_num;\/\/样本数目$/;"	m	class:ann_model	access:private
+ann_model::sigmoid	ann.cpp	/^inline double ann_model::sigmoid(const double x)$/;"	f	class:ann_model	signature:(const double x)
+ann_model::sigmoid	ann_head.h	/^		inline double sigmoid(const double x);\/\/activation function，激活函数$/;"	p	class:ann_model	access:private	signature:(const double x)
+ann_model::train	ann.cpp	/^void ann_model::train()$/;"	f	class:ann_model	signature:()
+ann_model::train	ann_head.h	/^		void train();\/\/train for the model and parameters$/;"	p	class:ann_model	access:public	signature:()
+ann_model::~ann_model	ann.cpp	/^ann_model::~ann_model()$/;"	f	class:ann_model	signature:()
+ann_model::~ann_model	ann_head.h	/^		~ann_model();$/;"	p	class:ann_model	access:public	signature:()
+answer_mat	ann_head.h	/^		mat answer_mat;\/\/真实标签矩阵,samp_num*class_num$/;"	m	class:ann_model	access:private
 centroid	kmeans_head.h	/^	mat centroid;\/\/����$/;"	m	class:kmeans_clusters	access:private
+class_num	ann_head.h	/^		int class_num;\/\/类的数目$/;"	m	class:ann_model	access:private
+classifac	nb_head.h	/^		void classifac;$/;"	m	class:nb_model	access:public
+classifcation	ann.cpp	/^vec ann_model::classifcation(const mat& t_data)$/;"	f	class:ann_model	signature:(const mat& t_data)
+classifcation	ann_head.h	/^		vec classifcation(const mat& t_data);\/\/预测$/;"	p	class:ann_model	access:public	signature:(const mat& t_data)
+classification	knn.cpp	/^int knn_model::classification(const vec& data_vec, const int k)$/;"	f	class:knn_model	signature:(const vec& data_vec, const int k)
+classification	knn.cpp	/^vec knn_model::classification(const mat& data_mat, const int k)$/;"	f	class:knn_model	signature:(const mat& data_mat, const int k)
+classification	knn_head.h	/^	int classification(const vec& data_vec, const int k);\/\/单样本分类$/;"	p	class:knn_model	access:public	signature:(const vec& data_vec, const int k)
+classification	knn_head.h	/^	vec classification(const mat& data_mat, const int k);\/\/多样本分类$/;"	p	class:knn_model	access:public	signature:(const mat& data_mat, const int k)
 cluster_num	kmeans_head.h	/^	int cluster_num;\/\/�����$/;"	m	class:kmeans_clusters	access:private
+correction	ann.cpp	/^void ann_model::correction(const vec& in_d, const vec& mid_d, const vec& out_d, const vec& ans_d)$/;"	f	class:ann_model	signature:(const vec& in_d, const vec& mid_d, const vec& out_d, const vec& ans_d)
+correction	ann_head.h	/^		void correction(const vec& in_d, const vec& mid_d, const vec& out_d, const vec& ans_d);\/\/参数修正，基于W,V误差修正$/;"	p	class:ann_model	access:private	signature:(const vec& in_d, const vec& mid_d, const vec& out_d, const vec& ans_d)
+cov	PCA/include/PCA_head.h	/^		vector<vector<double>> cov;\/\/Э�������$/;"	m	class:PCA_model	access:private
 dim_num	GMM_head.h	/^	int dim_num;\/\/����ά��$/;"	m	class:GMM_model	access:private
+dim_num	ann_head.h	/^		int dim_num;\/\/样本维度$/;"	m	class:ann_model	access:private
 dim_num	kmeans_head.h	/^	int dim_num;\/\/����ά��$/;"	m	class:kmeans_clusters	access:private
+dim_num	knn_head.h	/^	int dim_num;\/\/数据维度数目$/;"	m	class:knn_model	access:private
 display	GMM.cpp	/^void GMM_model::display()$/;"	f	class:GMM_model	signature:()
 display	GMM_head.h	/^	void display();$/;"	p	class:GMM_model	access:public	signature:()
 display	kmeans.cpp	/^void kmeans_clusters::display()$/;"	f	class:kmeans_clusters	signature:()
 display	kmeans_head.h	/^	void display();$/;"	p	class:kmeans_clusters	access:public	signature:()
+eejcb	PCA/include/PCA_head.h	/^int eejcb(double a[],int n,double v[],double eps,int jt);$/;"	p	signature:(double a[],int n,double v[],double eps,int jt)
+eejcb	PCA/src/PCA.cpp	/^int eejcb(double a[],int n,double v[],double eps,int jt)$/;"	f	signature:(double a[],int n,double v[],double eps,int jt)
+eigenvalue	PCA/include/PCA_head.h	/^		vector<double> eigenvalue;\/\/����ֵ$/;"	m	class:PCA_model	access:public
+eigenvector	PCA/include/PCA_head.h	/^		vector<vector<double>> eigenvector;\/\/������������$/;"	m	class:PCA_model	access:public
+error_all	ann.cpp	/^double ann_model::error_all(const mat& res)$/;"	f	class:ann_model	signature:(const mat& res)
+error_all	ann_head.h	/^		double error_all(const mat& res);\/\/输入为模型的输出标签，sample_num * class_num，并没用转换为真实标签$/;"	p	class:ann_model	access:private	signature:(const mat& res)
+error_one	ann.cpp	/^double ann_model::error_one(const vec& ans, const vec& res)$/;"	f	class:ann_model	signature:(const vec& ans, const vec& res)
+error_one	ann_head.h	/^		double error_one(const vec& ans1, const vec& res1);\/\/计算输出标签和真实标签的误差，为全局误差　$/;"	p	class:ann_model	access:private	signature:(const vec& ans1, const vec& res1)
+fea	PCA/include/PCA_head.h	/^		int fea;\/\/����ά��$/;"	m	class:PCA_model	access:private
 gama	GMM_head.h	/^	mat gama;\/\/���ʾ���ÿ�����Ӧÿ����˹�ֲ��ĸ���$/;"	m	class:GMM_model	access:private
 gauss_num	GMM_head.h	/^	int gauss_num;\/\/��˹��$/;"	m	class:GMM_model	access:private
 get_centroid	kmeans.cpp	/^void kmeans_clusters::get_centroid()$/;"	f	class:kmeans_clusters	signature:()
@@ -55,13 +159,22 @@ get_cluster_class	kmeans.cpp	/^void kmeans_clusters::get_cluster_class()$/;"	f	c
 get_cluster_class	kmeans_head.h	/^	void get_cluster_class();\/\/�õ������ǩ$/;"	p	class:kmeans_clusters	access:private	signature:()
 get_prob	GMM.cpp	/^double GMM_model::get_prob(const int i, const int k)$/;"	f	class:GMM_model	signature:(const int i, const int k)
 get_prob	GMM_head.h	/^	double get_prob(const int i, const int k);\/\/��ȡ���������ʣ�E����$/;"	p	class:GMM_model	access:private	signature:(const int i, const int k)
+get_rand	ann.cpp	/^inline double ann_model::get_rand()$/;"	f	class:ann_model	signature:()
+get_rand	ann_head.h	/^		inline double get_rand();\/\/随机数[-1,1]$/;"	p	class:ann_model	access:private	signature:()
 get_variance	kmeans.cpp	/^double kmeans_clusters::get_variance()$/;"	f	class:kmeans_clusters	signature:()
 get_variance	kmeans_head.h	/^	double get_variance();\/\/�õ�����$/;"	p	class:kmeans_clusters	access:private	signature:()
 gmm_node	GMM_head.h	/^}gmm_node;$/;"	t	typeref:struct:node
+init	ann.cpp	/^void ann_model::init(const int node_n)$/;"	f	class:ann_model	signature:(const int node_n)
+init	ann_head.h	/^		void init(const int node_n);\/\/初始化层间连接权值和学习速率$/;"	p	class:ann_model	access:public	signature:(const int node_n)
 input_data	GMM.cpp	/^void GMM_model::input_data(const mat& in_data)$/;"	f	class:GMM_model	signature:(const mat& in_data)
 input_data	GMM_head.h	/^	void input_data(const mat& in_data);$/;"	p	class:GMM_model	access:public	signature:(const mat& in_data)
+input_data	ann.cpp	/^void ann_model::input_data(const mat& in_data, const vec& in_data_lab)$/;"	f	class:ann_model	signature:(const mat& in_data, const vec& in_data_lab)
+input_data	ann_head.h	/^		void input_data(const mat& in_data, const vec& in_data_lab);$/;"	p	class:ann_model	access:public	signature:(const mat& in_data, const vec& in_data_lab)
 input_data	kmeans.cpp	/^void kmeans_clusters::input_data(const mat& in_data)$/;"	f	class:kmeans_clusters	signature:(const mat& in_data)
 input_data	kmeans_head.h	/^	void input_data(const mat& in_data);$/;"	p	class:kmeans_clusters	access:public	signature:(const mat& in_data)
+input_data	knn.cpp	/^void knn_model::input_data(const mat& in_data, const vec& in_data_lab)$/;"	f	class:knn_model	signature:(const mat& in_data, const vec& in_data_lab)
+input_data	knn_head.h	/^	void input_data(const mat& in_data, const vec& in_data_lab);\/\/输入数据$/;"	p	class:knn_model	access:public	signature:(const mat& in_data, const vec& in_data_lab)
+k_num	knn_head.h	/^	int k_num;\/\/k的数目$/;"	m	class:knn_model	access:private
 kmeans_clusters	kmeans.cpp	/^kmeans_clusters::kmeans_clusters()$/;"	f	class:kmeans_clusters	signature:()
 kmeans_clusters	kmeans.cpp	/^kmeans_clusters::kmeans_clusters(const mat& in_data)$/;"	f	class:kmeans_clusters	signature:(const mat& in_data)
 kmeans_clusters	kmeans_head.h	/^	kmeans_clusters();$/;"	p	class:kmeans_clusters	access:public	signature:()
@@ -91,36 +204,95 @@ kmeans_clusters::train	kmeans.cpp	/^void kmeans_clusters::train(const int c_num)
 kmeans_clusters::train	kmeans_head.h	/^	void train(const int c_num);$/;"	p	class:kmeans_clusters	access:public	signature:(const int c_num)
 kmeans_clusters::~kmeans_clusters	kmeans.cpp	/^kmeans_clusters::~kmeans_clusters()$/;"	f	class:kmeans_clusters	signature:()
 kmeans_clusters::~kmeans_clusters	kmeans_head.h	/^	~kmeans_clusters();$/;"	p	class:kmeans_clusters	access:public	signature:()
-knn_	knn_head.h	/^		knn_;$/;"	m	class:knn_model	access:public
+knn_model	knn.cpp	/^knn_model::knn_model()$/;"	f	class:knn_model	signature:()
+knn_model	knn.cpp	/^knn_model::knn_model(const mat& in_data, const vec& in_data_lab)$/;"	f	class:knn_model	signature:(const mat& in_data, const vec& in_data_lab)
+knn_model	knn_head.h	/^	knn_model();\/\/构造函数$/;"	p	class:knn_model	access:public	signature:()
+knn_model	knn_head.h	/^	knn_model(const mat& in_data, const vec& in_data_lab);$/;"	p	class:knn_model	access:public	signature:(const mat& in_data, const vec& in_data_lab)
 knn_model	knn_head.h	/^class knn_model{$/;"	c
-knn_model::knn_	knn_head.h	/^		knn_;$/;"	m	class:knn_model	access:public
+knn_model::classification	knn.cpp	/^int knn_model::classification(const vec& data_vec, const int k)$/;"	f	class:knn_model	signature:(const vec& data_vec, const int k)
+knn_model::classification	knn.cpp	/^vec knn_model::classification(const mat& data_mat, const int k)$/;"	f	class:knn_model	signature:(const mat& data_mat, const int k)
+knn_model::classification	knn_head.h	/^	int classification(const vec& data_vec, const int k);\/\/单样本分类$/;"	p	class:knn_model	access:public	signature:(const vec& data_vec, const int k)
+knn_model::classification	knn_head.h	/^	vec classification(const mat& data_mat, const int k);\/\/多样本分类$/;"	p	class:knn_model	access:public	signature:(const mat& data_mat, const int k)
+knn_model::dim_num	knn_head.h	/^	int dim_num;\/\/数据维度数目$/;"	m	class:knn_model	access:private
+knn_model::input_data	knn.cpp	/^void knn_model::input_data(const mat& in_data, const vec& in_data_lab)$/;"	f	class:knn_model	signature:(const mat& in_data, const vec& in_data_lab)
+knn_model::input_data	knn_head.h	/^	void input_data(const mat& in_data, const vec& in_data_lab);\/\/输入数据$/;"	p	class:knn_model	access:public	signature:(const mat& in_data, const vec& in_data_lab)
+knn_model::k_num	knn_head.h	/^	int k_num;\/\/k的数目$/;"	m	class:knn_model	access:private
+knn_model::knn_model	knn.cpp	/^knn_model::knn_model()$/;"	f	class:knn_model	signature:()
+knn_model::knn_model	knn.cpp	/^knn_model::knn_model(const mat& in_data, const vec& in_data_lab)$/;"	f	class:knn_model	signature:(const mat& in_data, const vec& in_data_lab)
+knn_model::knn_model	knn_head.h	/^	knn_model();\/\/构造函数$/;"	p	class:knn_model	access:public	signature:()
+knn_model::knn_model	knn_head.h	/^	knn_model(const mat& in_data, const vec& in_data_lab);$/;"	p	class:knn_model	access:public	signature:(const mat& in_data, const vec& in_data_lab)
+knn_model::label	knn_head.h	/^	vec label;\/\/原始标签$/;"	m	class:knn_model	access:private
+knn_model::raw_data	knn_head.h	/^	mat raw_data;\/\/原始数据$/;"	m	class:knn_model	access:private
+knn_model::samp_num	knn_head.h	/^	int samp_num;\/\/样本数目$/;"	m	class:knn_model	access:private
+knn_model::~knn_model	knn.cpp	/^knn_model::~knn_model()$/;"	f	class:knn_model	signature:()
+knn_model::~knn_model	knn_head.h	/^	~knn_model();\/\/析构函数$/;"	p	class:knn_model	access:public	signature:()
+label	ann_head.h	/^		vec label;\/\/标签数据$/;"	m	class:ann_model	access:private
 label	kmeans_head.h	/^	vec label;\/\/�������$/;"	m	class:kmeans_clusters	access:private
+label	knn_head.h	/^	vec label;\/\/原始标签$/;"	m	class:knn_model	access:private
+label_2_num	ann_head.h	/^		map<double,int> label_2_num;\/\/标签转数字，确定class_num，防止label的中断，如label为1，2，4。。。$/;"	m	class:ann_model	access:private
+learn_rate	ann_head.h	/^		double learn_rate;\/\/学习速率$/;"	m	class:ann_model	access:private
 main	GMM.cpp	/^int main()$/;"	f	signature:()
-main	kmeans.cpp	/^int main()$/;"	f	signature:()
+main	PCA/test/main_PCA_test.cpp	/^int main()$/;"	f	signature:()
+main	ann_test.cpp	/^int main()$/;"	f	signature:()
 main	knn.cpp	/^int main()$/;"	f	signature:()
 mat	global.h	/^typedef std::vector<vec> mat;$/;"	t
+max_iter	ann_head.h	/^		int max_iter;\/\/iteration,最大迭代次数$/;"	m	class:ann_model	access:private
+mean	PCA/include/PCA_head.h	/^		vector<double> mean;\/\/ƽ��ֵ		$/;"	m	class:PCA_model	access:private
+min_error	ann_head.h	/^		double min_error;\/\/最小前后误差差，err_all-err_pre$/;"	m	class:ann_model	access:private
 miu	GMM_head.h	/^	vec miu;$/;"	m	struct:node	access:public
+multiplication	ann.cpp	/^inline double multiplication(const vec& vec1, const vec& vec2)$/;"	f	signature:(const vec& vec1, const vec& vec2)
+multiplication	ann_head.h	/^inline double multiplication(const vec& vec1, const vec& vec2);$/;"	p	signature:(const vec& vec1, const vec& vec2)
+nb_model	nb_head.h	/^class nb_model{$/;"	c
+nb_model::classifac	nb_head.h	/^		void classifac;$/;"	m	class:nb_model	access:public
+nb_model::train	nb_head.h	/^		void train();$/;"	p	class:nb_model	access:public	signature:()
 node	GMM_head.h	/^typedef struct node{$/;"	s
 node::miu	GMM_head.h	/^	vec miu;$/;"	m	struct:node	access:public
 node::pi	GMM_head.h	/^	double pi;$/;"	m	struct:node	access:public
 node::sigam	GMM_head.h	/^	mat sigam;$/;"	m	struct:node	access:public
+node_num	ann_head.h	/^		int node_num;\/\/隐层节点数$/;"	m	class:ann_model	access:private
+num	PCA/include/PCA_head.h	/^		int num;\/\/������$/;"	m	class:PCA_model	access:private
 para	GMM_head.h	/^	vector<gmm_node> para;\/\/��˹ģ�Ͳ���$/;"	m	class:GMM_model	access:private
+parameter_setting	ann.cpp	/^void ann_model::parameter_setting(const double learn_r, const int max_i, const double min_e)$/;"	f	class:ann_model	signature:(const double learn_r, const int max_i, const double min_e)
+parameter_setting	ann_head.h	/^		void parameter_setting(const double learn_r, const int max_i, const double min_e);\/\/parameter setting,the num of hidden nodes, the rate of learning, the max iteration, the min of error$/;"	p	class:ann_model	access:public	signature:(const double learn_r, const int max_i, const double min_e)
+pca_solve_eig	PCA/include/PCA_head.h	/^		int pca_solve_eig();$/;"	p	class:PCA_model	access:public	signature:()
+pca_solve_eig	PCA/src/PCA.cpp	/^int PCA_model::pca_solve_eig()$/;"	f	class:PCA_model	signature:()
 pi	GMM_head.h	/^	double pi;$/;"	m	struct:node	access:public
+prediction	ann.cpp	/^vec ann_model::prediction(const vec& in_data, vec& mid)$/;"	f	class:ann_model	signature:(const vec& in_data, vec& mid)
+prediction	ann_head.h	/^		vec prediction(const vec& in_data, vec& mid);\/\/输出层结果预测，基于W和V矩阵$/;"	p	class:ann_model	access:private	signature:(const vec& in_data, vec& mid)
+print	PCA/include/PCA_head.h	/^		void print();$/;"	p	class:PCA_model	access:public	signature:()
+print	PCA/src/PCA.cpp	/^void PCA_model::print()$/;"	f	class:PCA_model	signature:()
 probability	GMM.cpp	/^double GMM_model::probability(const vec& sample)$/;"	f	class:GMM_model	signature:(const vec& sample)
 probability	GMM_head.h	/^	double probability(const vec& sample);$/;"	p	class:GMM_model	access:public	signature:(const vec& sample)
 raw_data	GMM_head.h	/^	mat raw_data;\/\/ԭʼ����$/;"	m	class:GMM_model	access:private
+raw_data	ann_head.h	/^		mat raw_data;\/\/原始数据$/;"	m	class:ann_model	access:private
 raw_data	kmeans_head.h	/^	mat raw_data;\/\/ԭʼ����$/;"	m	class:kmeans_clusters	access:private
+raw_data	knn_head.h	/^	mat raw_data;\/\/原始数据$/;"	m	class:knn_model	access:private
+result_mat	ann_head.h	/^		mat result_mat;\/\/结果输出矩阵，并非真实标签，samp_num*class_num$/;"	m	class:ann_model	access:private
 samp_num	GMM_head.h	/^	int samp_num;\/\/������$/;"	m	class:GMM_model	access:private
+samp_num	ann_head.h	/^		int samp_num;\/\/样本数目$/;"	m	class:ann_model	access:private
 samp_num	kmeans_head.h	/^	int samp_num;\/\/������$/;"	m	class:kmeans_clusters	access:private
+samp_num	knn_head.h	/^	int samp_num;\/\/样本数目$/;"	m	class:knn_model	access:private
 sigam	GMM_head.h	/^	mat sigam;$/;"	m	struct:node	access:public
+sigmoid	ann.cpp	/^inline double ann_model::sigmoid(const double x)$/;"	f	class:ann_model	signature:(const double x)
+sigmoid	ann_head.h	/^		inline double sigmoid(const double x);\/\/activation function，激活函数$/;"	p	class:ann_model	access:private	signature:(const double x)
+test_main	kmeans.cpp	/^int test_main()$/;"	f	signature:()
 train	GMM.cpp	/^void GMM_model::train(const int g_num)$/;"	f	class:GMM_model	signature:(const int g_num)
 train	GMM_head.h	/^	void train(const int g_num);$/;"	p	class:GMM_model	access:public	signature:(const int g_num)
+train	ann.cpp	/^void ann_model::train()$/;"	f	class:ann_model	signature:()
+train	ann_head.h	/^		void train();\/\/train for the model and parameters$/;"	p	class:ann_model	access:public	signature:()
 train	kmeans.cpp	/^void kmeans_clusters::train(const int c_num)$/;"	f	class:kmeans_clusters	signature:(const int c_num)
 train	kmeans_head.h	/^	void train(const int c_num);$/;"	p	class:kmeans_clusters	access:public	signature:(const int c_num)
+train	nb_head.h	/^		void train();$/;"	p	class:nb_model	access:public	signature:()
 variance	kmeans.cpp	/^inline double variance(const vec& vec1, const vec& vec2)$/;"	f	signature:(const vec& vec1, const vec& vec2)
 variance	kmeans_head.h	/^inline double variance(const vec& vec1, const vec& vec2);$/;"	p	signature:(const vec& vec1, const vec& vec2)
 vec	global.h	/^typedef std::vector<double> vec;$/;"	t
 ~GMM_model	GMM.cpp	/^GMM_model::~GMM_model()$/;"	f	class:GMM_model	signature:()
 ~GMM_model	GMM_head.h	/^	~GMM_model();$/;"	p	class:GMM_model	access:public	signature:()
+~PCA_model	PCA/include/PCA_head.h	/^		~PCA_model();$/;"	p	class:PCA_model	access:public	signature:()
+~PCA_model	PCA/src/PCA.cpp	/^PCA_model::~PCA_model(){$/;"	f	class:PCA_model	signature:()
+~ann_model	ann.cpp	/^ann_model::~ann_model()$/;"	f	class:ann_model	signature:()
+~ann_model	ann_head.h	/^		~ann_model();$/;"	p	class:ann_model	access:public	signature:()
 ~kmeans_clusters	kmeans.cpp	/^kmeans_clusters::~kmeans_clusters()$/;"	f	class:kmeans_clusters	signature:()
 ~kmeans_clusters	kmeans_head.h	/^	~kmeans_clusters();$/;"	p	class:kmeans_clusters	access:public	signature:()
+~knn_model	knn.cpp	/^knn_model::~knn_model()$/;"	f	class:knn_model	signature:()
+~knn_model	knn_head.h	/^	~knn_model();\/\/析构函数$/;"	p	class:knn_model	access:public	signature:()
