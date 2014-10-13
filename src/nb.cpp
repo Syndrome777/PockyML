@@ -49,7 +49,7 @@ void nb_model::train()
 	for(int i = 0; i < class_num; i++){
 		vec temp;	
 		for(int j = 0; j < samp_num; j++){
-			if(label_2_num[j] == i)
+			if(label_2_num[label[j]] == i)
 				temp.push_back(j);
 		}
 		samp_data.push_back(temp);
@@ -73,7 +73,7 @@ void nb_model::train()
 		mu.push_back(temp_avg);
 		sigma.push_back(temp_var);
 		temp_avg.clear();temp_var.clear();
-		class_prob.push_back(samp_data[i].size() / samp_num);
+		class_prob.push_back(1.0 * samp_data[i].size() / samp_num);
 	}
 	cout<<"The training is over!"<<endl;
 	
@@ -88,8 +88,9 @@ vec nb_model::classification(const mat& t_data)
 	for(int i = 0; i < t_data.size(); i++){
 		vec temp_v;
 		for(int j = 0; j < class_num; j++){
-			int temp = class_prob[j];
+			double temp = class_prob[j];
 			for(int k = 0; k < dim_num; k++){
+				//cout << gaussian(t_data[i][k], mu[j][k], sigma[j][k]) << endl;
 				temp = temp * gaussian(t_data[i][k], mu[j][k], sigma[j][k]);
 			}
 		temp_v.push_back(temp);
@@ -123,7 +124,7 @@ vec nb_model::classification(const mat& t_data)
 
 inline double average(const vec& s_data)
 {
-	double avg = 0;
+	double avg = 0.0;
 	for(int i = 0; i < s_data.size(); i++)
 		avg = avg + s_data[i];
 	
@@ -132,7 +133,7 @@ inline double average(const vec& s_data)
 
 inline double variance(const vec& s_data, const double avg)
 {
-	double var = 0;
+	double var = 0.0;
 	for(int i = 0; i < s_data.size(); i++){
 		var = var + (s_data[i] - avg) * (s_data[i] - avg);
 	}
@@ -141,10 +142,10 @@ inline double variance(const vec& s_data, const double avg)
 	return sqrt(var);
 }
 
-//1维高斯模型概率
+//1维高斯模型概率,概率密度函数大于1是正常的，表示随机变量在这个值附件取值的概率比较大
 inline double gaussian(const double x_d, const double mu_d, const double sigma_d)
 {
-	return 1.0/(sqrt(2*PI)*sigma_d)*exp(-(x_d-mu_d)*(x_d-mu_d)/2/sigma_d/sigma_d);
+	return 1.0/(sqrt(2*PI)*sigma_d)*exp(-(x_d-mu_d)*(x_d-mu_d)/2/sigma_d/sigma_d) + 1e-20;
 }
 
 

@@ -30,7 +30,7 @@ class nb_model{
 		mat sigma;//
 		vec class_prob;//类别在训练样本中的概率
 
-}
+};
 
 
 inline double gaussian(const double x_d, const double mu_d, const double sigma_d);
