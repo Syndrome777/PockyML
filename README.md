@@ -9,14 +9,16 @@ I'm a novice in ML, but I think I love it. So I will try my best to write this t
 Algorithm 
 ---------
 
-#### 1. K-means
-#### 2. GMM (Gaussian Mixture Model, Unfinished)
-#### 3. KNN (K-Nearest Neighbor)
-#### 4. SVM (Suport Vector Machine, based on LibSVM)
-#### 5. ANN (Artifical Neural Network)
-#### 6. PCA (Principal Component Analysis)
-#### 7. NB (Naive Bayesian)
-#### 8. LR (Logistic Regression, Unfinished)
+#### 1.  K-means
+#### 2.  GMM (Gaussian Mixture Model, Unfinished)
+#### 3.  KNN (K-Nearest Neighbor)
+#### 4.  SVM (Suport Vector Machine, based on LibSVM)
+#### 5.  ANN (Artifical Neural Network)
+#### 6.  PCA (Principal Component Analysis)
+#### 7.  NB (Naive Bayesian)
+#### 8.  LR (Logistic Regression, Unfinished)
+#### 9.  C4.5 (Deccision Tree, Unfinished)
+#### 10. Adaboost (Baesd on C4.5 Unfinished)
 
 
 Author 
