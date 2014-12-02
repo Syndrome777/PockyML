@@ -2,7 +2,7 @@
 #define _ANN_HEAD_H_
 
 
-#include"global.h"
+#include"../global.h"
 
 using namespace std;
 

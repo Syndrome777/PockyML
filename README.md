@@ -70,6 +70,23 @@ Algorithm
 #### 10. Adaboost (Baesd on C4.5 Unfinished)
 
 
+How to use it
+-------------
+```
+	//Makefile
+	make
+	
+	./ann_test
+	./pca_test
+	./nb_test
+	./knn_test
+	./kmean_test
+	
+	//Clean the object file and others
+	make clean
+```
+
+
 Author 
 ------
 

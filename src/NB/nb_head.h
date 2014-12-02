@@ -3,7 +3,7 @@
 #define _NB_HEAD_H_
 
 
-#include"global.h"
+#include"../global.h"
 //#include"../../3rd/Eigen/LU"
 
 using namespace std;

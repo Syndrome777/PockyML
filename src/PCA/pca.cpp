@@ -1,4 +1,4 @@
-#include"PCA_head.h"
+#include"pca_head.h"
 
 PCA_model::PCA_model(){
 }
@@ -7,7 +7,7 @@ PCA_model::~PCA_model(){
 }
 
 //template<T>
-PCA_model::PCA_model(vector<vector<double>> data,int anum,int afea){	
+PCA_model::PCA_model(mat &data,int anum,int afea){	
 	//i代表特征维数标签
 	fea=afea;
 	num=anum;

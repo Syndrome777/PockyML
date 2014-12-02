@@ -2,7 +2,7 @@
 #ifndef _kmeans_head_h
 #define _kmeans_head_h
 
-#include"global.h"
+#include"../global.h"
 
 using namespace std;
 

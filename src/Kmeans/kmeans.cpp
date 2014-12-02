@@ -124,66 +124,6 @@ inline double variance(const vec& vec1, const vec& vec2)
 	return sqrt(var);
 }
 
-int test_main()
-{
-	double input;
-	kmeans_clusters mykmean;
-	mat test_data(10);
-	for(int i = 0; i < 10; i++)
-		test_data[i].resize(3);
-	for(int i = 0; i < 10; i++)
-		for(int j = 0; j < 3; j++){
-			cin>>input;
-			test_data[i][j] = input;
-		}
-
-	mykmean.input_data(test_data);
-	mykmean.train(3);
-	mykmean.display();
-
-	getchar();getchar();
-	return 0;
-}
-
-/*
-test data:
-
-1 2 3
-2 3 4
-2 7 9 
-6 8 9
-100 200 100
-1 2 1
-4 5 2
-11 23 10
-2 34 12
-44 31 11
-
-cluster:
-3
-
-result:
-label =
-
-     1
-     1
-     1
-     1
-     2
-     1
-     1
-     3
-     3
-     3
-
-
-Centriod =
-
-    2.6667    4.5000    4.6667
-  100.0000  200.0000  100.0000
-   19.0000   29.3333   11.0000
-*/
-
 
 
 

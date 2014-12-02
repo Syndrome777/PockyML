@@ -2,8 +2,7 @@
 #ifndef _PCA_head_H_  
 #define _PCA_head_H_
 
-#include<iostream>
-#include<vector>
+#include"../global.h"
 #include<math.h>
 #include<iomanip>
 
@@ -14,11 +13,11 @@ using namespace std;
 
 class PCA_model{
 	public:
-		vector<vector<double>> eigenvector;//特征向量矩阵
-		vector<double> eigenvalue;//特征值
+		mat eigenvector;//特征向量矩阵
+		vec eigenvalue;//特征值
 
 		PCA_model();
-		PCA_model(vector<vector<double>> data,int anum,int afea);
+		PCA_model(mat &data,int anum,int afea);
 		~PCA_model();
 		void print();
 		int pca_solve_eig();
@@ -26,8 +25,8 @@ class PCA_model{
 	private:
 		int num;//样本数
 		int fea;//特征维数
-		vector<vector<double>> cov;//协方差矩阵
-		vector<double> mean;//平均值		
+		mat cov;//协方差矩阵
+		vec mean;//平均值		
 };
 
 
