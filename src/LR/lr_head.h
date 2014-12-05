@@ -22,8 +22,11 @@ class lr_model{
 		vec label;
 		vec W;
 		double b;
+		int max_iter;
+		double learn_rate;
 };
 
+inline double multiplication(const vec& vec1, const vec& vec2);
 
 
 
