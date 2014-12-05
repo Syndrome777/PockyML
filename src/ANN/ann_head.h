@@ -49,7 +49,6 @@ class ann_model{
 		void correction(const vec& in_d, const vec& mid_d, const vec& out_d, const vec& ans_d);//参数修正，基于W,V误差修正
 
 		inline double sigmoid(const double x);//activation function，激活函数
-		inline double get_rand();//随机数[-1,1]
 
 };
 

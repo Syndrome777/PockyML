@@ -293,12 +293,6 @@ inline double ann_model::sigmoid(const double x)
 }
 
 
-inline double ann_model::get_rand()
-{
-	return 2.0*rand()/RAND_MAX - 1.0;
-}
-
-
 
 inline double multiplication(const vec& vec1, const vec& vec2)
 {

@@ -37,6 +37,10 @@ for(int   i=0;i <3;i++)
 */
 
 
+inline double get_rand()
+{
+	return 2.0*rand()/RAND_MAX - 1.0;
+}
 
 
 
