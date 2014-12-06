@@ -14,6 +14,7 @@ class lr_model{
 		void input_data(const mat& in_data, const vec& in_data_lab);
 		bool train();
 		vec prediction(const mat& in_data);
+		void display();
 
 	private:
 		int samp_num;
@@ -24,6 +25,7 @@ class lr_model{
 		double b;
 		int max_iter;
 		double learn_rate;
+		double max_loss;
 };
 
 inline double multiplication(const vec& vec1, const vec& vec2);

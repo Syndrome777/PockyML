@@ -9,10 +9,11 @@ int main()
 	mat data;
 	vec lab;
 
-	int samp = 10;
-	int dim = 4;
+	int samp = 100;
+	int dim = 5;
 
-	ifstream file("/test_data/test_data.txt");
+	ifstream file("/test_data/test_data_regression.txt");
+	//ifstream file("C:\\Users\\Hua\\Documents\\GitHub\\PockyML\\test_data\\test_data_regression.txt");
 	for(int i = 0; i < samp; i++){
 		vec temp;
 		double a;
@@ -34,7 +35,8 @@ int main()
 
 	vec reg;
 	reg = myLR.prediction(data);
-	
+
+	myLR.display();
 	cout << "The prediction of regression is :" << endl;
 	for(int i = 0 ; i < reg.size(); i++){
 		cout << lab[i] << "  " << reg[i] << endl;
@@ -44,6 +46,6 @@ int main()
 }
 
 
-
+//
 
 
