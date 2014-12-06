@@ -65,7 +65,19 @@ Algorithm
 	test_lab = myNB.classification(data);
 ```
 
-#### 8.  LR (Logistic Regression, Unfinished)
+#### 8.  LR (Linear Regression)
+
+```c++
+	//instantiate the model
+	lr_model myLR(x,y);
+	//initialise the model
+	myLR.init();
+	//train hte model
+	myLR.train();
+	//regression
+	test_y = myLR.prediction(test_y);
+```
+
 #### 9.  C4.5 (Deccision Tree, Unfinished)
 #### 10. Adaboost (Baesd on C4.5 Unfinished)
 
