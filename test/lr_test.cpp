@@ -12,7 +12,7 @@ int main()
 	int samp = 100;
 	int dim = 5;
 
-	ifstream file("/test_data/test_data_regression.txt");
+	ifstream file("test_data/test_data_regression.txt");
 	//ifstream file("C:\\Users\\Hua\\Documents\\GitHub\\PockyML\\test_data\\test_data_regression.txt");
 	for(int i = 0; i < samp; i++){
 		vec temp;
@@ -26,6 +26,7 @@ int main()
 		data.push_back(temp);
 		temp.clear();
 	}
+	//cout << data[0][0] << endl;
 	cout << "success to input data" <<endl;
 
 	lr_model myLR(data,lab);

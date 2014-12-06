@@ -1,10 +1,10 @@
 # -std=c++11
 
-VPATH=src:src/ANN:src/NB:src/Kmeans:src/KNN:src/PCA:test
+VPATH=src:src/ANN:src/NB:src/Kmeans:src/KNN:src/PCA:src/LR:test
 
 CC=g++
 
-all:ann_test nb_test kmeans_test knn_test pca_test
+all:ann_test nb_test kmeans_test knn_test pca_test lr_test
 .PHONY:all
 
 #echo "compiling ann"
@@ -37,11 +37,17 @@ pca.o:pca.cpp pca_head.h global.h
 pca_test:pca_test.cpp pca.o
 	${CC} -std=c++11 pca.o test/pca_test.cpp -o pca_test
 
+#echo "compiling lr"
+lr.o:lr.cpp lr_head.h global.h
+	${CC} -c -std=c++11 src/LR/lr.cpp -o lr.o
+lr_test:lr_test.cpp lr.o
+	${CC} -std=c++11 lr.o test/lr_test.cpp -o lr_test
+
 
 
 .PHONY:clean
 clean:
-	-rm *.o ann_test nb_test kmeans_test knn_test pca_test
+	-rm *.o ann_test nb_test kmeans_test knn_test pca_test lr_test
 
 
 
